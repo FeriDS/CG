@@ -2,7 +2,6 @@
 import math
 import OpenGL.GL as GL
 
-
 from core.base import Base
 from core.utils import Utils
 from core.attribute import Attribute
@@ -200,6 +199,7 @@ class Example(Base):
         self.base_color_upCircle.data[0] = color_value
         self.base_color_upSmallCircle.data[0] = color_value
         self.base_color_upQuarterCircle.data[0] = color_value
+
         ## Render scene
         # Reset color buffer with specified color
         GL.glBindVertexArray(self.vao_upCircle)

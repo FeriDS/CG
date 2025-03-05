@@ -197,7 +197,7 @@ class Example(Base):
         GL.glUseProgram(self.program_ref)
         GL.glClear(GL.GL_COLOR_BUFFER_BIT)
 
-        if(self.input.isKeyPressed("w") or self.input.isKeyPressed("up")):
+        if(self.input.isKeyPressed("up") and self.translation_downCircle.data[1] < 0.1):
             self.translation_downCircle.data[1] += self.movementSpeed
             self.translation_downSmallCircle.data[1] += self.movementSpeed
             self.translation_upCircle.data[1] += self.movementSpeed
@@ -208,7 +208,7 @@ class Example(Base):
             self.translation_polygonUp.data[1] += self.movementSpeed
             self.translation_polygonDown.data[1] += self.movementSpeed
 
-        if(self.input.isKeyPressed("a") or self.input.isKeyPressed("left")):
+        if(self.input.isKeyPressed("left") and self.translation_downSmallCircle.data[0] > -0.5):
             self.translation_downCircle.data[0] -= self.movementSpeed
             self.translation_downSmallCircle.data[0] -= self.movementSpeed
             self.translation_upCircle.data[0] -= self.movementSpeed
@@ -219,7 +219,7 @@ class Example(Base):
             self.translation_polygonUp.data[0] -= self.movementSpeed
             self.translation_polygonDown.data[0] -= self.movementSpeed
 
-        if(self.input.isKeyPressed("s") or self.input.isKeyPressed("down")):
+        if(self.input.isKeyPressed("down") and self.translation_upCircle.data[1] >-0.1):
             self.translation_downCircle.data[1] -= self.movementSpeed
             self.translation_downSmallCircle.data[1] -= self.movementSpeed
             self.translation_upCircle.data[1] -= self.movementSpeed
@@ -230,7 +230,7 @@ class Example(Base):
             self.translation_polygonUp.data[1] -= self.movementSpeed
             self.translation_polygonDown.data[1] -= self.movementSpeed
 
-        if(self.input.isKeyPressed("d") or self.input.isKeyPressed("right")):
+        if(self.input.isKeyPressed("right") and self.translation_upSmallCircle.data[0] < 0.5):
             self.translation_downCircle.data[0] += self.movementSpeed
             self.translation_downSmallCircle.data[0] += self.movementSpeed
             self.translation_upCircle.data[0] += self.movementSpeed
