@@ -17,7 +17,7 @@ class Example(Base):
         self.renderer = Renderer()
         self.scene = Scene()
         self.camera = Camera(aspect_ratio=int(800/600))
-        self.camera.set_position([0.5, -0.5, 4])
+        self.camera.set_position([0.5, -0.5, 3])
         geometry = BoxGeometry()
         # material = PointMaterial(property_dict={"baseColor": [1, 1, 0], "pointSize": 5})
         # material = SurfaceMaterial(property_dict={"useVertexColors": True})
