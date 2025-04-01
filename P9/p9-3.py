@@ -50,6 +50,7 @@ class Example(Base):
         guitarraBlackParts_material = TextureMaterial(texture=Texture(file_name="images/darkWood.jpg"))
         self.guitarraBlackParts = Mesh(guitarraBlackParts_geometry, guitarraBlackParts_material)
         self.rig2.add(self.guitarraBlackParts)
+        self.rig2.rotate_y(-math.pi/2)
         self.rig2.set_position([0, 0.5, -0.5])
         self.scene.add(self.rig2)
 

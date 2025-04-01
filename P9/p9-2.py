@@ -45,6 +45,7 @@ class Example(Base):
         self.rig1.add(self.guitarraBlackParts)
 
         self.rig1.set_position([0, 0.5, -0.5])
+        self.rig1.rotate_y(-math.pi/2)
         self.scene.add(self.rig1)
         axes = AxesHelper(axis_length=2)
         self.scene.add(axes)
